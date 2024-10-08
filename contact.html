@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact - Excelsior Painting</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic container for the contact section */
+        #contact {
+            display: flex; /* Use flexbox to create a two-column layout */
+            justify-content: space-between;
+            margin: 30px; /* Adjust margins as needed */
+        }
+
+        /* Left side styling */
+        .contact-info {
+            flex: 1; /* Takes up one part of the flex container */
+            margin-right: 20px; /* Space between columns */
+        }
+
+        /* Right side styling */
+        .contact-form {
+            flex: 1; /* Takes up one part of the flex container */
+            margin-left: 25px; /* Space between columns */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack inputs vertically */
+        }
+
+        input, textarea {
+            margin-bottom: 10px; /* Space between form elements */
+            padding: 10px; /* Padding for inputs */
+            border-radius: 5px; /* Rounded corners */
+            border: 1px solid #ccc; /* Border styling */
+        }
+
+        input[type="submit"] {
+            background-color: #001f3f; /* Button color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444; /* Button hover effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <h1 class="logo">Excelsior Painting</h1>
+                <p class="established">Est. 2021</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact">
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p>Whatever job it may be, we'd love to hear from you! Feel free to reach out with any questions or for a free estimate.</p>
+            <p></p>
+            <p>Email: hap.christiansen.21@gmail.com</p>
+            <p>Phone: (402) 426-6488</p>
+        </div>
+        <div class="contact-form">
+            <h3>Leave a Message</h3>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="Phone">Phone:</label>
+                <input type="phone" id="phone" name="phone" required>
+
+                <label for="message">Street Address:</label>
+                <input type="address" id="address" name="address">
+
+                <label for="message">Description of work needed:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <label for="message">Other questions/info:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Excelsior Painting. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

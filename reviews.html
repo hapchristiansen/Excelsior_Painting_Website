@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reviews - Excelsior Painting</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modal styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px #000;
+            text-align: center;
+        }
+
+        .close-btn {
+            background-color: #001f3f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .close-btn:hover {
+            background-color: #444;
+        }
+
+        /* Form spacing adjustments */
+        form input, form textarea {
+            margin-bottom: 5px; /* Reduce spacing between form elements */
+        }
+
+        form label {
+            margin-bottom: 3px; /* Reduce spacing between labels and input fields */
+        }
+
+        /* Static yellow stars for reviews */
+        .static-star {
+            color: gold;  /* Make stars yellow */
+            font-size: 20px;  /* Adjust the size of the stars */
+            pointer-events: none; /* Disable any mouse events */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <h1 class="logo">Excelsior Painting</h1>
+                <p class="established">Est. 2021</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Container for the reviews section with two vertical sections -->
+    <div class="container">
+        <section id="reviews-section">
+            <div class="reviews-left">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-list" id="reviews-list">
+                    <ul>
+                        <!-- Review 1 -->
+                        <li>
+                            <strong>5.0</strong> 
+                            <span class="static-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 
+                            <em>Kim J. Lincoln, NE</em> <br>
+                            <a href="#">Paint, Varnish or Stain Interior Surfaces</a><br>
+                            They were perfect.
+                        </li>
+                        <!-- Review 2 -->
+                        <li>
+                            <strong>5.0</strong> 
+                            <span class="static-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 
+                            <em>Mark S. Lincoln, NE</em> <br>
+                            <a href="#">Paint, Varnish or Stain Interior Surfaces</a><br>
+                            Great service. Painting was professional, quick, and really well done. I would do again. Thanks!!!!
+                        </li>
+                        <!-- Review 3 -->
+                        <li>
+                            <strong>5.0</strong> 
+                            <span class="static-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 
+                            <em>Michael R. Lincoln, NE</em> <br>
+                            <a href="#">Paint, Varnish or Stain Interior Surfaces</a><br>
+                            I can't recommend them strongly enough. This was a big job, 9 rooms plus a huge vaulted ceiling with skylights and a stairwell. Great communication, follow through, prompt, fair pricing and quality work. They did a great job, fast and cleaned up after themselves. They waited to be sure I was happy with everything before I paid them. Exactly what you hope for when hiring someone.
+                        </li>
+                        <!-- Review 4 -->
+                        <li>
+                            <strong>5.0</strong> 
+                            <span class="static-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 
+                            <em>Lynnzy L. Waverly, NE</em> <br>
+                            <a href="#">Paint or Stain Interior Surfaces</a><br>
+                            Excelsior Painting did a wonderful job on my house. Very articulate and easy to work with. These are some very hard working people and worth the bang for your buck.
+                        </li>
+                        <!-- Review 5 -->
+                        <li>
+                            <strong>5.0</strong> 
+                            <span class="static-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 
+                            <em>Debbie H. Alvo, NE</em> <br>
+                            <a href="#">Paint, Varnish or Stain Interior Surfaces</a><br>
+                            Hap is VERY efficient and quick! I was more than impressed with the work he did for me. I will definitely be calling Hap again.
+                        </li>
+                        <!-- Review 6 -->
+                        <li>
+                            <strong>5.0</strong> 
+                            <span class="static-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 
+                            <em>Neoma P. Lincoln, NE</em> <br>
+                            <a href="#">Paint, Varnish or Stain Interior Surfaces</a><br>
+                            Good company, very helpful, did a good job, and did it promptly.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reviews-right">
+                <h3>Leave a Review</h3>
+                <form id="review-form">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <!-- Star Rating System -->
+                    <label for="rating">Rating:</label><br>
+                    <div class="star-rating" id="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <input type="hidden" id="rating" name="rating" value="0" required>
+                    <br>
+
+                    <label for="review">Review:</label><br>
+                    <textarea id="review" name="review" required></textarea><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Pop-up for review submission -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thanks for your review!</p>
+            <button class="close-btn" id="closeModalBtn">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Excelsior Painting. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to handle hover, click, form submission, and modal -->
+    <script>
+        // Initial state: keep modal hidden
+        const modal = document.getElementById('thankYouModal');
+        modal.style.display = "none"; // Ensure it's not visible on page load
+
+        const stars = document.querySelectorAll('.star');
+        const ratingInput = document.getElementById('rating');
+        let rating = 0;
+
+        // Handle star hover functionality
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                const hoverValue = star.getAttribute('data-value');
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= hoverValue) {
+                        s.classList.add('hovered');
+                    } else {
+                        s.classList.remove('hovered');
+                    }
+                });
+            });
+
+            // Remove hover effect
+            star.addEventListener('mouseout', () => {
+                stars.forEach(s => {
+                    s.classList.remove('hovered');
+                });
+            });
+
+            // Handle star click functionality
+            star.addEventListener('click', () => {
+                rating = star.getAttribute('data-value');
+                ratingInput.value = rating;
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= rating) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+            });
+        });
+
+        // Handle form submission
+        const form = document.getElementById('review-form');
+        const reviewList = document.getElementById('reviews-list').querySelector('ul');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page refresh
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const reviewText = document.getElementById('review').value;
+            const rating = document.getElementById('rating').value;
+
+            // Only trigger modal if the review form is valid
+            if (name !== "" && reviewText !== "" && rating !== "0") {
+                // Create new review HTML
+                const newReview = document.createElement('li');
+                newReview.innerHTML = `
+                    <strong>${rating}.0</strong> 
+                    <span class="static-star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <em>${name}</em> <br>
+                    <a href="#">Paint, Varnish or Stain Interior Surfaces</a><br>
+                    ${reviewText}
+                `;
+
+                // Add new review to the review list
+                reviewList.appendChild(newReview);
+
+                // Show the thank you modal
+                modal.style.display = "flex"; // Show modal after submission
+
+            } else {
+                alert("Please complete all fields and select a rating.");
+            }
+        });
+
+        // Close modal when close button is clicked
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = "none";
+            // Clear form and reset stars after closing modal
+            form.reset();
+            stars.forEach(s => s.classList.remove('selected')); // Clear selected stars
+            ratingInput.value = 0; // Reset rating value
+        });
+
+        // Close modal when clicking outside of the modal content
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                form.reset(); // Reset form after modal close
+                stars.forEach(s => s.classList.remove('selected')); // Clear selected stars
+                ratingInput.value = 0; // Reset rating value
+            }
+        });
+    </script>
+</body>
+</html>

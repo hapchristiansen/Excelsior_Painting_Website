@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photos - Excelsior Painting</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling for the photos grid */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px; /* Space between photos */
+            padding: 50px;
+        }
+
+        /* Styling for each photo container */
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out; /* Smooth zoom effect on hover */
+            border-radius: 10px; /* Rounded corners for photos */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        /* Hover effect to enlarge the photos */
+        .photo-gallery img:hover {
+            transform: scale(1.1); /* Zoom in effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <h1 class="logo">Excelsior Painting</h1>
+                <p class="established">Est. 2021</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Photos Gallery -->
+    <section class="photo-gallery">
+        <img src="Screenshot 2024-10-08 at 2.29.27 PM.png" alt="Painting Project 1">
+        <img src="Screenshot 2024-10-08 at 2.29.45 PM.png" alt="Painting Project 2">
+        <img src="Screenshot 2024-10-08 at 2.29.55 PM.png" alt="Painting Project 3">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Excelsior Painting. All rights reserved.</p>
+    </footer>
+</body>
+</html>

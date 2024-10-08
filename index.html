@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Excelsior Painting</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add styles for fading text */
+        .fade-in {
+            opacity: 0; /* Start invisible */
+            transition: opacity 1s ease-in; /* Transition effect */
+        }
+    
+        .fade-in.visible {
+            opacity: 1; /* Fade in effect */
+        }
+    
+        /* Home Banner styling */
+        #home-banner {
+            position: relative; 
+            background: url('Screenshot\ 2024-10-08\ at\ 11.17.28\ AM.png') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Center all items horizontally */
+            align-items: center; /* Center all items vertically */
+            flex-direction: column; /* Stack items vertically */
+            color: black;
+            padding: 20px 50px;
+            text-align: center; /* Ensure text is centered */
+        }
+    
+        /* Add overlay for background */
+        #home-banner::after {
+            content: ""; 
+            position: absolute; 
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+    
+        /* Styling for text lines */
+        .text-line {
+            font-size: 38px;
+            color: black;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            position: relative;
+            z-index: 2;
+            text-align: center; /* Ensure text is centered */
+            margin: 10px 0; /* Adjust vertical margin */
+        }
+    
+        /* Styling for the contact button */
+        .contact-button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 20px 20px;
+            background-color: #001f3f;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 30px;
+            text-decoration: none;
+            z-index: 2;
+            text-align: center;
+        }
+    
+        .contact-button:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <h1 class="logo">Excelsior Painting</h1>
+                <p class="established">Est. 2021</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Banner with centered text -->
+    <div id="home-banner">
+        <div class="text-line fade-in" id="line1">Serving the Lincoln, Waverly and Omaha Area</div>
+        <div class="text-line fade-in" id="line2">Licensed and Insured</div>
+        <a href="contact.html" class="contact-button fade-in" id="contactButton">Contact Us Today for a Free Quote!</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Excelsior Painting. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade in effect for text
+        document.addEventListener("DOMContentLoaded", function() {
+            const lines = document.querySelectorAll('.fade-in');
+            let delay = 0;
+
+            lines.forEach((line) => {
+                setTimeout(() => {
+                    line.classList.add('visible'); 
+                }, delay);
+                delay += 1000; 
+            });
+        });
+    </script>
+</body>
+</html>

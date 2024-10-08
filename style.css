@@ -1,0 +1,211 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full width for html and body */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Body styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background-color: #001f3f;
+    width: 100vw;
+    padding: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logo on the left */
+.logo-container {
+    text-align: left;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    color: #fff;
+}
+
+.established {
+    font-size: 18px;
+    color: #ddd;
+    margin-top: -10px;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Home Banner styling */
+#home-banner {
+    background: url('Screenshot\ 2024-10-08\ at\ 11.17.28\ AM.png');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CTA button */
+.cta {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #001f3f;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: #999;
+    cursor: pointer;
+}
+
+/* Reviews Section styling */
+#reviews-section {
+    display: flex; /* Use flexbox to create two columns */
+    justify-content: space-between; /* Create space between the columns */
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.reviews-left {
+    flex: 1; /* Take up available space */
+    margin-right: 40px; /* Add space between the two sections */
+}
+
+.reviews-list {
+    max-height: 400px;
+    overflow-y: auto; /* Make the list scrollable */
+}
+
+.reviews-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reviews-list ul li {
+    margin-bottom: 15px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Right side for the review form */
+.reviews-right {
+    flex: 1;
+    max-width: 400px; /* Limit the width of the form */
+}
+
+.reviews-right h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+}
+
+/* Reduced space between input fields and textarea */
+form input[type="text"],
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px; /* Reduced margin between form elements */
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #004080;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Styles for the clickable stars */
+.star-rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px; /* Reduced margin to lessen space between fields */
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc; /* Default color of unselected stars */
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.star.hovered,
+.star.selected {
+    color: #FFD700; /* Gold color for hovered and selected stars */
+}
+
+/* Reduced space between input fields */
+input[type="text"],
+textarea {
+    margin-bottom: 10px; /* Reduce space between text input and stars */
+}
